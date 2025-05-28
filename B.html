@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resim Galerisi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+ 
+    <style>
+      /* === Genel Ayarlar === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background:#e9f2fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+
+}
+/* === Başlıklar === */
+h1, h2, h3, h4, h5, h6 {
+  color: #1e3a8a;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* === Paragraflar === */
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* === Linkler === */
+a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* === Butonlar === */
+button, .btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover, .btn:hover {
+  background-color: #2563eb;
+}
+
+/* === Form Elemanları === */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+  transition: border-color 0.3s ease;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+/* === Listeler === */
+ul, ol {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* === Tablolar === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+th {
+  background: #3b82f6;
+  color: white;
+  text-align: left;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* === Kart Görünüm === */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.07);
+  margin-bottom: 2rem;
+}
+
+/* === Responsive Container === */
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+      .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar burada -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3 mb-4"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">🧭 Menü</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-start"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav d-flex flex-row flex-wrap gap-3">
+            <li class="nav-item px-3">
+              <a
+                class="nav-link btn btn-outline-primary text-white px-3"
+                href="index.html"
+                >🏠 Ana Sayfa (A.html)</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                class="nav-link btn btn-outline-primary text-white px-3"
+                href="B.html"
+                >📷 Resim Galerisi (B.html)</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                class="nav-link btn btn-outline-primary text-white px-3"
+                href="C.html"
+                >📽️ Slayt Gösterisi (C.html)</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                class="nav-link btn btn-outline-primary text-white px-3"
+                href="D.html"
+                >📝 Kullanıcı Formu (D.html)</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                class="nav-link btn btn-outline-primary text-white px-3"
+                href="E.html"
+                >💼 Maaş Grid (E.html)</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+ <div class="container-fluid py-5">
+  <h1 class="text-center mb-4">Manzara Resimleri</h1>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+    <!-- Kart 1 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="resimler/alpler.png" class="card-img-top" alt="Dağ Manzarası" />
+        <div class="card-body">
+          <h5 class="card-title">Alpler</h5>
+          <p class="card-text">Avrupa'nın en yüksek dağ silsilesi. Karlı zirveleriyle ünlüdür.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Kart 2 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="resimler/maldivler.png" class="card-img-top" alt="Okyanus" />
+        <div class="card-body">
+          <h5 class="card-title">Maldivler</h5>
+          <p class="card-text">Hint Okyanusu'nda turkuaz sular ve beyaz kumsallar.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Kart 3 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="resimler/amazon.png" class="card-img-top" alt="Orman" />
+        <div class="card-body">
+          <h5 class="card-title">Amazon</h5>
+          <p class="card-text">Dünyanın en büyük tropikal yağmur ormanı. Biyoçeşitlilik merkezi.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Kart 4 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="resimler/sahra.png" class="card-img-top" alt="Çöl" />
+        <div class="card-body">
+          <h5 class="card-title">Sahra</h5>
+          <p class="card-text">Dünyanın en büyük sıcak çölü. Kum tepeleri ve vahalar.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Kart 5 -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="resimler/tahoe.png" class="card-img-top" alt="Göl" />
+        <div class="card-body">
+          <h5 class="card-title">Tahoe Gölü</h5>
+          <p class="card-text">ABD'de kristal berraklığında suya sahip dağ gölü.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="text-center mt-4">
+        <a href="A.html" class="btn btn-primary">Ana Sayfa</a>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>
