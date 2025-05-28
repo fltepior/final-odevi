@@ -135,14 +135,19 @@
         margin: auto;
         padding: 20px;
       }
-
-      .carousel-item img {
-        height: 500px;
-        object-fit: cover;
+      @media (max-width: 576px) {
+        .carousel-caption h5 {
+          font-size: 1.25rem;
+        }
+        .carousel-caption p {
+          font-size: 1rem;
+        }
       }
-      .carousel-caption {
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
+
+      .carousel-caption h5,
+      .carousel-caption p {
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
       }
     </style>
   </head>
